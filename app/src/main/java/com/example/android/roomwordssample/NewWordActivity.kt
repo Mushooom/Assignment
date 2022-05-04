@@ -37,15 +37,17 @@ class NewWordActivity : AppCompatActivity() {
         setContentView(R.layout.activity_new_word)
         val editWordView = findViewById<EditText>(R.id.edit_word)
         val editWordView4 = findViewById<EditText>(R.id.edit_word4)
+        val editPhoneView = findViewById<EditText>(R.id.editTextPhone)
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
             val replyIntent = Intent()
-            if (TextUtils.isEmpty(editWordView.text) || TextUtils.isEmpty(editWordView4.text)) {
+            if (TextUtils.isEmpty(editWordView.text) || TextUtils.isEmpty(editWordView4.text) || TextUtils.isEmpty(editPhoneView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val word = editWordView.text.toString()
                 val word4 = editWordView4.text.toString()
-                var theWord:ArrayList<String> = arrayListOf(word, word4)
+                val phone = editPhoneView.text.toString()
+                var theWord:ArrayList<String> = arrayListOf(word, word4, phone)
 
 
                 replyIntent.putExtra(EXTRA_REPLY, theWord)//,EXTRA_REPLY4, word4 )

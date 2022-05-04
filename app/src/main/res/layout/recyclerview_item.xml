@@ -31,4 +31,12 @@ limitations under the License. -->
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/phoneWiew"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
 </LinearLayout>

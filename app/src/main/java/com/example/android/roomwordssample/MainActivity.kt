@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.getStringArrayListExtra(NewWordActivity.EXTRA_REPLY)?.let { reply ->
-                val word = Word(reply.get(0), reply.get(1))
+                val word = Word(reply.get(0), reply.get(1), reply.get(2))
                 wordViewModel.insert(word)
             }
         } else {

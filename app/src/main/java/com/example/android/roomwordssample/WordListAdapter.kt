@@ -33,15 +33,17 @@ class WordListAdapter : ListAdapter<Word, WordViewHolder>(WORDS_COMPARATOR) {
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val current = getItem(position)
-        holder.bind(current.word, current.word4)
+        holder.bind(current.word, current.word4, current.phone)
     }
 
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val wordItemView: TextView = itemView.findViewById(R.id.textView)
         private val wordItemView4: TextView = itemView.findViewById(R.id.textView4)
-        fun bind(text: String?, text4: String?) {
+        private val phoneNumber: TextView = itemView.findViewById(R.id.phoneWiew)
+        fun bind(text: String?, text4: String?, phone: String?) {
             wordItemView.text = text
             wordItemView4.text = text4
+            phoneNumber.text = phone
         }
 
         companion object {
