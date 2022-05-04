@@ -24,6 +24,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
+//new commit
+
 /**
  * Activity for entering a word.
  */
